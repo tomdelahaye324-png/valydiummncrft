@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>VALYDIUM Launcher</AssemblyName>
+    <RootNamespace>Valydium</RootNamespace>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CmlLib.Core" Version="4.0.4" />
+    <PackageReference Include="CmlLib.Core.Auth.Microsoft" Version="3.2.0" />
+  </ItemGroup>
+</Project>
