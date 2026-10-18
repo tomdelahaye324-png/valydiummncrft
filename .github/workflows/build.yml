@@ -1,0 +1,21 @@
+name: Build VALYDIUM Installer
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Installer Inno Setup
+        run: choco install innosetup -y --no-progress
+      - name: Compiler
+        shell: cmd
+        run: build.bat
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VALYDIUM_Installer
+          path: dist/VALYDIUM_Installer.exe
